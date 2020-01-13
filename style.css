@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* type selectors */
+
+html{
+  font-size: 1.2em;
+  line-height: 1.8em;
+  height: 100%;
+}
+
+body{
+  height: 100%;
+}
+
+div{
+  width: 70%;
+  margin: 0 auto;
+  background-color: #eaeaea;
+  padding: 30px;
+}
+
+/* classes & id */
+
+.redBG{
+  background-color: red;
+  color: #fff;
+  padding: 15px;
+}
+
+#resourceLink{
+  text-decoration: none;
+}
+
+/* attribute selector */
+
+a[href= "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators#General_sibling"]{
+  color: orange;
+}
+
+/* pseudo class / pseudo element */
+
+#resourceLink:hover{
+  color: purple;
+}
+
+/*Below targets the fourth child in the ul menu* this is the pseudo class*/
+ul li:nth-child(4){
+  color: blue;
+}
+/*we lost the blue because they're both considered the same level of specficity*/
+ul li:nth-child(even){
+  color: red;
+}
+
+/* Combinators */
+
+/* descendant combinator */
+main em{
+  color: green;
+}
+/* direct child combinator */
+p > em{
+  color: orange;
+}
+
+/* general sibling */
+h3 ~ p{
+  color: purple;
+}
+
+/* direct sibling */
+h3 + p{
+  color: yellow;
+}
+
+main section:first-of-type > h3 + p{
+  border: 1px solid #BADA55;
+}
